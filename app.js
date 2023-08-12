@@ -1,1 +1,15 @@
-// For Next Time: Start building Web Server (Lesson 59 - 1:57)
+// const http = require('http');
+
+const express = require('express');
+const bodyParser = require('body-parser');
+
+// For Next Time: Start adding Middleware (Lesson 60)
+
+const app = express();
+
+app.set('view engine', 'ejs');
+app.set('views', 'views');
+
+app.use(bodyParser.urlencoded({ extended: false }));
+
+app.listen(3000);
