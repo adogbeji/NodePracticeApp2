@@ -3,7 +3,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-// For Next Time: Start looking at how Middleware works (Lesson 61 - 0:33)
+// For Next Time: Start looking at how Middleware works (Lesson 61 - 1:20)
 
 const app = express();
 
@@ -19,6 +19,7 @@ app.use((req, res, next) => {
 
 app.use((req, res, next) => {
     console.log('Middleware 2');
+    res.send('<h1>Hello from Express!</h1>');
 });
 
 app.listen(3000);
