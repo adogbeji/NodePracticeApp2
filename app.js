@@ -3,7 +3,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-// For Next Time: Continue Handling Different Routes (Lesson 63 - 0:29)
+// For Next Time: Continue Handling Different Routes (Lesson 63 - 2:00)
 
 const app = express();
 
@@ -17,7 +17,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 //     next();
 // });
 
-app.use((req, res, next) => {
+app.use('/', (req, res, next) => {
     console.log('Middleware 2');
     res.send('<h1>Hello from Express!</h1>');
 });
