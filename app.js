@@ -3,7 +3,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-// For Next Time: Continue Handling Different Routes (Lesson 63 - 2:32)
+// For Next Time: Lesson 64 (Parsing Incoming Requests - 1:25)
 
 const app = express();
 
@@ -13,7 +13,7 @@ app.set('views', 'views');
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.use('/add-product', (req, res, next) => {
-    res.send('<h1>Add Product Page!</h1>');
+    res.send('<form action="/product" method="POST"><input type="text" name="product"><button type="submit">Add Product</button></form>');
 });
 
 app.use('/', (req, res, next) => {
