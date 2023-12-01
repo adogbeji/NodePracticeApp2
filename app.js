@@ -3,7 +3,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-// For Next Time: Lesson 64 (Parsing Incoming Requests - 2:07)
+// For Next Time: Lesson 64 (Parsing Incoming Requests - 2:59)
 
 const app = express();
 
@@ -16,7 +16,9 @@ app.use('/add-product', (req, res, next) => {
     res.send('<form action="/product" method="POST"><input type="text" name="product"><button type="submit">Add Product</button></form>');
 });
 
-app.use('/product', (req, res, next) => {})
+app.use('/product', (req, res, next) => {
+    res.redirect('/');
+});
 
 app.use('/', (req, res, next) => {
     console.log('Middleware 2');
