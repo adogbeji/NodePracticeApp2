@@ -3,7 +3,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 
-// For Next Time: Lesson 64 (Parsing Incoming Requests - 2:59)
+// For Next Time: Lesson 64 (Parsing Incoming Requests - 4:06)
 
 const app = express();
 
@@ -17,6 +17,7 @@ app.use('/add-product', (req, res, next) => {
 });
 
 app.use('/product', (req, res, next) => {
+    console.log(req.body);
     res.redirect('/');
 });
 
